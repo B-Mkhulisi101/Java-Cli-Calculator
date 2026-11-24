@@ -9,7 +9,7 @@ public void Calc(){
     char op = 'e';
     int num1 = 0;
     int num2 = 0;
-    boolean again = true;
+    
 
 do{
     System.out.println("----------Let's Calculate! ^-^----------");
@@ -19,7 +19,7 @@ do{
      op = scanner.next().charAt(0);
      if (op == '!'){ 
         System.out.println("Goodbye ^-^");
-        again = false;
+       
         return;
      }
      System.out.println("Enter two Numbers separated by a space: ");
@@ -42,7 +42,7 @@ do{
             System.out.println(num1 * num2);
             break;
         case '/':
-            if ( num2 == 0){System.out.println("Enter a number greater or less than 0!"); continue;}
+            if ( num2 == 0){System.out.println("Cannot divide by zero!"); continue;}
             System.out.println((double)num1 / num2);
             break;
 
@@ -51,7 +51,7 @@ do{
 
     }
     
- } while(again);
+ } while(true);
 
 }
 
